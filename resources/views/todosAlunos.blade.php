@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sistema Laravel</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1> Seja bem vindo {{ $id }} a pagina home </h1>
+    <ul>
+    
+    @foreach ($resultado as $alunos)
+      <li>  {{ $alunos->nome }}
+    <a href="/aluno/deletar/{{$alunos->id}}">Deletar</a>
+    </li>
+    @endforeach
+    </ul>
 </body>
 </html>

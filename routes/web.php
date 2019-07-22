@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function(){
-    return view('home');
-});
+Route::get('/home/{id}','HomeController@home');
+
+Route::get('/contato', 'contatoController@listarcontatos');
+
+Route::get('/aluno/cadastro', 'AlunoController@cadastrarAluno');
+
+Route::post('/aluno/cadastro', 'AlunoController@cadastrarAluno');
+
+Route::get('/aluno/todosAlunos', 'AlunoController@todosAlunos');
+
+Route::get('/aluno/deletar/{id}', 'AlunoController@deletarAluno');
+
