@@ -27,3 +27,9 @@ Route::get('/aluno/todosAlunos', 'AlunoController@todosAlunos');
 
 Route::get('/aluno/deletar/{id}', 'AlunoController@deletarAluno');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('produtos/todos','ProdutoController@listartodos');
